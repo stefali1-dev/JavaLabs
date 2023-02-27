@@ -1,4 +1,5 @@
 import static java.lang.Character.isDigit;
+import static java.lang.System.exit;
 
 public class Main {
 
@@ -15,28 +16,9 @@ public class Main {
         }
         return true;
     }
-    String printLine(int n, int matrix[][])
-    {
-        String str = "";
-        for(int j = 0; j < n; j++)
-        {
-            str = str + (char)matrix[n][j];
-        }
-        return str;
-    }
-
-    String printColumn(int n, int matrix[][])
-    {
-        String str = "";
-        for(int i = 0; i < n; i++)
-        {
-            str = str + (char)matrix[i][n];
-        }
-        return str;
-    }
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
 
-        System.out.println("Hello world!");
 
         if(isInteger(args[0]))
         {
@@ -44,9 +26,12 @@ public class Main {
         }
         else {
             System.out.println("Your argument is NOT an integer");
+            exit(1);
         }
 
         int n = Integer.parseInt(args[0]);
+
+
 
         int arr[] = new int[n];
 
@@ -69,6 +54,42 @@ public class Main {
             System.out.println("");
         }
 
+        String[] lineArr = new String[n];
+        String[] columnArr = new String[n];
 
+        for (int i = 0; i < n; i++) {
+            String line = "";
+            for (int j = 0; j < n; j++) {
+                line += Integer.toString(matrix[i][j]);
+            }
+            lineArr[i] = line;
+            if(n <= 30000)
+            {
+                System.out.println("Line " + i + ": " + lineArr[i]);
+            }
+
+        }
+
+        for (int i = 0; i < n; i++) {
+            String column = "";
+            for (int j = 0; j < n; j++) {
+                column += Integer.toString(matrix[j][i]);
+            }
+            columnArr[i] = column;
+            if(n <= 30000)
+            {
+                System.out.println("Column " + i + ": " + columnArr[i]);
+
+            }
+        }
+
+
+
+        if(n > 30000)
+        {
+            long endTime   = System.nanoTime();
+            long totalTime = endTime - startTime;
+            System.out.println(totalTime);
+        }
     }
 }
