@@ -1,7 +1,5 @@
 # JavaLabs
 
-Lab 1: am facut partea obligatorie si tema, cum scrie in cerinta
-
 ### Lab 1
 
 * Am facut partea obligatorie si tema, cum scrie in cerinta
