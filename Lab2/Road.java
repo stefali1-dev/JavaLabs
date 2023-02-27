@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 enum ROAD_TYPE{
     HIGHWAY,
@@ -62,5 +62,13 @@ class Road {
         this.speedLimit = speedLimit;
     }
 
-
+    @Override
+    public String toString() {
+        return "Road{" +
+                "type=" + type +
+                ", length=" + length +
+                ", speedLimit=" + speedLimit +
+                ", locations=" + Arrays.toString(locations) +
+                '}';
+    }
 }
