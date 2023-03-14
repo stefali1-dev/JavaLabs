@@ -26,6 +26,7 @@ public class Main {
         network.addNote(company1);
         network.addNote(company2);
 
+
         List nodeList = network.getNodeList();
 
         for (int i = 0; i < nodeList.size(); i++)
