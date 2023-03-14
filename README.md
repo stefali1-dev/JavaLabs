@@ -26,3 +26,9 @@
 * Clasa Programmer mosteneste Person si are in plus atributul unic "favoriteLanguage"
 * Clasa Network contine o variabila de tip List cu obiecte de tip Node care pot fi persoane sau companii, o functie de adaugare a unui nod nou in lista si setter si getter
 * In Main am creat niste exemple de persoane si companii, si am initializat un Network cu ele
+
+### Lab 4 - compulsory part :
+* Am construit clasele Main, Student si Project
+* clasele Student si Project au atributul name, settere, gettere si override la functia compareTo
+* In Main, prin stream-uri, am facut un array students cu 3 obiecte Student si un array projects cu 3 obiecte Project, am facut un LinkedList studentList ce contine Studenti din array-ul students si l-am sortat cu Collections.sort() pentru afisare, am facut un TreeSet projectSet cu Projects din array-ul projects dar nu a trebuit sa-l sortez separat pentru afisare deoarece e sortat by default la fiecare adaugare a unui element
+* La final am afisat elementele din studentList si din projectSet      
