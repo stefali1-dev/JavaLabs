@@ -32,3 +32,13 @@
 * clasele Student si Project au atributul name, settere, gettere si override la functia compareTo care compara in ordine alfabetica in functie de nume
 * In Main, prin stream-uri, am facut un array students cu 3 obiecte Student si un array projects cu 3 obiecte Project, am facut un LinkedList studentList ce contine Studenti din array-ul students si l-am sortat cu Collections.sort() pentru afisare, am facut un TreeSet projectSet cu Projects din array-ul projects dar nu a trebuit sa-l sortez separat pentru afisare deoarece e sortat by default la fiecare adaugare a unui element
 * La final am afisat elementele din studentList si din projectSet      
+
+### Lab 4 - homework :
+* Am construit clasele Main, Student, Project si Problem
+* clasele Student si Project au atributul name, settere, gettere si override la functia compareTo care compara in ordine alfabetica in functie de nume si override la functia toString
+* Clasa problem contine o lista de Students, un set de Projects, constructor, settere si gettere, functie de afisare a studentilor cu numarul de preferinte mai mic decat media si o functie care rezolva problema printr-un algoritm Greedy
+* In Main am facut:
+* Prin stream-uri, un array students cu 3 obiecte Student si un array projects cu 3 obiecte Project, am facut un LinkedList studentList ce contine Studenti din array-ul students
+* 3 TreeSet-uri care corespund exemplului dat si apoi le-am setat ca atribut al obiectelor Student
+* Am initializat un obiect Problem si la atributele studentList si projects am adaugat noi obiecte nu nume generate random prin libraria Faker
+* La final am apelat functia de rezolvare a Probleme care returneaza un un Set de Pair<Student, Problem>

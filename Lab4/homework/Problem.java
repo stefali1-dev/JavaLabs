@@ -1,16 +1,18 @@
 package homework;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Problem {
 
     LinkedList<Student> studentList;
-    Map<Student, Project> maximumCardinalityMatching;
+    Set<Project> projects;
 
     public Problem() {
         studentList = new LinkedList<>();
-        maximumCardinalityMatching = new HashMap<>();
     }
 
     public LinkedList<Student> getStudentList() {
@@ -21,9 +23,8 @@ public class Problem {
         this.studentList = studentList;
     }
 
-
-    public Map<Student, Project> getMaximumCardinalityMatching() {
-        return maximumCardinalityMatching;
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
 
     public void displayLowPreferencesStudents()
@@ -43,5 +44,30 @@ public class Problem {
         for(Student stud : studentsWithFewPreferences){
             System.out.println(stud.getName());
         }
+    }
+
+    /**
+     * The algorithm starts with an empty set and a capacity of 1 for each project.
+     * Then it tries to assign each student to one of its preferred projects that still has capacity.
+     * If a match is found, the student and the project are added to the matching
+     * and the capacity of the project is reduced by 1.
+     * @return the maximum cardinality matching between students and projects
+     */
+    public Set<Pair> greedySolve() {
+        Set<Pair> matching = new HashSet<>();
+        Map<Project, Integer> projectToCapacity = new HashMap<>();
+        for (Project project : projects) {
+            projectToCapacity.put(project, 1);
+        }
+        for (Student student : studentList) {
+            for (Project project : student.getAdmissibleProjects()) {
+                if (projectToCapacity.get(project) > 0) {
+                    matching.add(new ImmutablePair<>(student, project));
+                    projectToCapacity.put(project, projectToCapacity.get(project) - 1);
+                    break;
+                }
+            }
+        }
+        return matching;
     }
 }
