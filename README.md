@@ -43,7 +43,7 @@
 * Am initializat un obiect Problem si la atributele studentList si projects am adaugat noi obiecte nu nume generate random prin libraria Faker
 * La final am apelat functia de rezolvare a Probleme care returneaza un un Set de Pair<Student, Problem>
 
-### Lab 4 - compulsory :
+### Lab 5 - compulsory :
 * Am construit clasele Main, Catalog, Document si Operation
 * clasele Catalog, Document si Operation au settere, gettere si override la functia toString
 * clasa Catalog mai are atributul name si un List cu Documents
