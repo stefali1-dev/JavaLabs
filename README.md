@@ -50,3 +50,20 @@
 * clasa Document mai are atributele name, ID, un map cu tags, si path
 * clasa Operation contine un Catalog pe care face operatii de afisare toString, de save, de load si de add a new Document la Lista cu Documente ale catalogului 
 * in Main, am creat 2 documente cu diferite atribute si le-am adaugat intr-o lista, apoi am facut Obiectul Operation la care i-am adaugat un catalog gol, dupa am folosit operatia add pentru a adauga cele 2 Documente, apoi am afisat catalogul text prin functia toString, apoi l-am salvat in fisierul catalog.json, apoi am dat load la acel fisier si am afisat in consola continutul
+
+### Lab 5 - homework :
+* Am construit interfata Command si clasele MainHomework, Catalog, Document, Operation, AddCommand, ListCommand, LoadCommand, ReportCommand, SaveCommand, ToStringComannd, ViewCommand
+* interfata Command contine functia abstracta "execute(Catalog catalog)" care da throw la exceptiile InvalidDataException si InvalidCommandException
+* clasele Catalog, Document si Operation au settere, gettere si override la functia toString
+* clasa Catalog mai are atributul name si un List cu Documents
+* clasa Document mai are atributele name, ID, un map cu tags, path si Url
+* clasa Operation contine un Catalog si toate clasele de tip Command
+* clasa AddCommand adauga un document la catalogul dat ca atributul functiei execute
+* clasa ListCommand afiseaza lista de documente a catalogului
+* clasa SaveCommand salveaza catalogul in format .json
+* clasa LoadCommand afiseaza catalogul din fisierul gasit in locatia din atributul "path"
+* clasa ToStringCommand salveaza intr-un atribut reprezentarea textuala a catalogului
+* clasa ViewCommand deschide fisierul documentului, care se gaseste la locatia din atributul "path", cu programul default al sistemului de operare
+* clasa ReportCommand genereaza un report HTML cu ajutorul unui template dat ca parametru, si salveaza raportul in path-ul dat ca parametru
+
+* in MainHomework, am creat 2 documente cu diferite atribute si le-am adaugat intr-un catalog cu ajutorul obiectului AddCommand, apoi am testat toate comenzile precizate mai sus
