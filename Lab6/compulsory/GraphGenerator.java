@@ -9,7 +9,7 @@ public class GraphGenerator {
         this.nodeList = new ArrayList<>();
         switch(size) {
             case 4:
-                // code block
+
                 nodeList.add(new Point(150, 100));
                 nodeList.add(new Point(600, 100));
                 nodeList.add(new Point(150, 500));
@@ -17,7 +17,7 @@ public class GraphGenerator {
 
                 break;
             case 5:
-                // code block
+                // positioning the 5 nodes of a graph
                 nodeList.add(new Point(375, 100));
                 nodeList.add(new Point(650, 300));
                 nodeList.add(new Point(600, 600));
@@ -25,7 +25,7 @@ public class GraphGenerator {
                 nodeList.add(new Point(150, 300));
                 break;
             case 6:
-                // code block
+                // positioning the 6 nodes of a graph
                 nodeList.add(new Point(100, 300));
                 nodeList.add(new Point(250, 100));
                 nodeList.add(new Point(500, 100));
@@ -47,12 +47,14 @@ public class GraphGenerator {
         for(Point point : nodeList){
             ArrayList<Point> adjacentNodesList = new ArrayList<>();
 
+            // iterating through adjacent nodes
             for(Point otherPoint : nodeList){
                 if(point != otherPoint){
                     int randomInt = new Random().nextInt(101);
 
                     // chance of percent% to enter this if
                     if(randomInt < percent){
+                        // adding a vertex
                         adjacentNodesList.add(otherPoint);
                     }
                 }
