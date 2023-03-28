@@ -75,3 +75,7 @@
 * clasa Controller este specificata la atributul fx:controller al tag-ului <Vbox> care este structura principala din aplicatie, astfel rolul ei fiind de a controla elementele din GUI. Clasa contine atribute care linked cu elementele din GUI prin denumirea lor, aparand in atributul fx:id. Clasa contine si functii care initializeaza si updateaza diferite elemente de GUI precum un Spinner, ChoiceBox, Butoane si Canvas.
 * clasa Point are doar 2 atribute: x si y, si reprezinta un punct pe Canvas
 * clasa GraphGenerator contine un ArrayList de Point0uri. Contructorul populeaza Lista cu noduri in functie de dimensiunea din parametrul size. Clasa mai are o functie care genereaza un graf cu nodurile din Lista, fiecare muchie avand o probabilitate de existenta data de parametrul lineProbability
+
+
+
+![Gif Example](https://github.com/stefali1-dev/JavaLabs/blob/main/Lab6/compulsory/lab6_compulsory.gif?raw=true)
