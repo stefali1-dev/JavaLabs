@@ -68,7 +68,7 @@
 
 * in MainHomework, am creat 2 documente cu diferite atribute si le-am adaugat intr-un catalog cu ajutorul obiectului AddCommand, apoi am testat toate comenzile precizate mai sus
 
-### Lab 6 - compulsory :
+### Lab 6 - compulsory cu JavaFx:
 * Am construit clasele MainApplication, Controller, GraphGenerator, Point si fisierul hello-view.fxml
 * Clasa MainApplication creaza obiectele FXMLLoader(care da load la hello-view.fxml) si Scene si porneste aplicatia
 * hello-view.fxml reprezinta GUI-ul si este exact la fel ca in exemplul de pe site, permitand posibilitatea de a modifica numarul nodurilor, probabilitatea muchiilor, un canvas care afiseaza graful si butoanele de Load Save Reset Exit
