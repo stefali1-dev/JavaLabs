@@ -79,3 +79,13 @@
 
 
 ![Gif Example](https://github.com/stefali1-dev/JavaLabs/blob/main/Lab6/compulsory/lab6_compulsory.gif?raw=true)
+
+### Lab 6 - homework cu JavaFx:
+* Am construit clasele MainApplication, Controller, GraphGenerator, Point, Player, clasa enum Color si fisierul hello-view.fxml
+* Clasa MainApplication creaza obiectele FXMLLoader(care da load la hello-view.fxml) si Scene si porneste aplicatia
+* hello-view.fxml reprezinta GUI-ul si este exact la fel ca in exemplul de pe site, permitand posibilitatea de a modifica numarul nodurilor, probabilitatea muchiilor, un canvas care afiseaza graful si butoanele de Load Save Reset Exit
+* clasa Player contine informatii despre player precum nume, culoarea si o structura de date ce reprezinta liniile trasate de el pana in momentul actual
+* clasa enum Color contine culorile RED si BLUE
+* clasa Controller este specificata la atributul fx:controller al tag-ului <Vbox> care este structura principala din aplicatie, astfel rolul ei fiind de a controla elementele din GUI. Clasa contine atribute care linked cu elementele din GUI prin denumirea lor, aparand in atributul fx:id. Clasa contine si functii care initializeaza si updateaza diferite elemente de GUI precum un Spinner, ChoiceBox, Butoane si Canvas. De asemenea, clasa Controller atribuie functionalitatea butonului "Save" de a salva imaginea de pe canvas ca PNG si salveaza starea obiectelor Player prin object serialization, si butonului "Load" de a relua starea obiectelor Player prin object serialization. De asemenea in functia updateCanvas a clasei am implementat verificarea unui click daca este pe o linie, printr-un mouse listener
+* clasa Point are doar 2 atribute: x si y, si reprezinta un punct pe Canvas
+* clasa GraphGenerator contine un ArrayList de Point0uri. Contructorul populeaza Lista cu noduri in functie de dimensiunea din parametrul size. Clasa mai are o functie care genereaza un graf cu nodurile din Lista, fiecare muchie avand o probabilitate de existenta data de parametrul lineProbability
