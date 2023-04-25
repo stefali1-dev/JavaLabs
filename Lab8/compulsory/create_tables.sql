@@ -23,3 +23,9 @@ CREATE TABLE IF NOT EXISTS public.genres
     name text COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT genres_pkey PRIMARY KEY (id)
 );
+
+CREATE TABLE album_genres (
+    album_id INTEGER NOT NULL REFERENCES albums(id),
+    genre_id INTEGER NOT NULL REFERENCES genres(id),
+    PRIMARY KEY (album_id, genre_id)
+);
