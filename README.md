@@ -97,3 +97,10 @@
 * clasa SharedMemory va reprezenta memoria partajata care contine token-urile
 * clasa Supervisor va reprezenta supraveghetorul care poate porni si intrerupe robotii
 * clasa Main va fi punctul de intrare al programului. Va crea harta, memoria partajata, robotii si supervizorul
+
+### Lab 8 - compulsory:
+* Am construit clasele Database, DatabaseTest, ArtistDAO si Main si script-ul SQL "sql_script.sql"
+* clasa singleton Database contine atribute si metode necesare gestionarii conectarii la baza de date, precum URL, USERNAME, PAROLA si metode de creare si de oprire a conexiunii
+* clasa DatabaseTest contine 3 teste pentru cele 3 metode ale clasei Database si anume GetInstance(), GetConnection() si CloseConnection(). Inainte de fiecare se va initializa singleton-ul, iar dupa fiecare test se va inchide conexiunea. Toate testele au trecut
+* clasa DAO ArtistDAO contine metode pentru crearea entry-urilor in tabelul artists, si metode pentru cautarea entry-urilor dupa nume si id
+* in Main initializam singleton-ul Database, executam scriptul sql si adaugam 2 entry-uri in tabelul artists initializand de asemenea un obiect ArtistDAO, la final fiind gata sa prindem exceptii legate de comenzile SQL si IO.
