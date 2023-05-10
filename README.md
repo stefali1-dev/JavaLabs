@@ -104,3 +104,10 @@
 * clasa DatabaseTest contine 3 teste pentru cele 3 metode ale clasei Database si anume GetInstance(), GetConnection() si CloseConnection(). Inainte de fiecare se va initializa singleton-ul, iar dupa fiecare test se va inchide conexiunea. Toate testele au trecut
 * clasa DAO ArtistDAO contine metode pentru crearea entry-urilor in tabelul artists, si metode pentru cautarea entry-urilor dupa nume si id
 * in Main initializam singleton-ul Database, executam scriptul sql si adaugam 2 entry-uri in tabelul artists initializand de asemenea un obiect ArtistDAO, la final fiind gata sa prindem exceptii legate de comenzile SQL si IO.
+
+### Lab 10 - compulsory:
+* Am construit clasele ClientThread, GameClient, GameServer si Main
+* In clasa GameServer se asteapta si se executa clienti daca este cazul
+* In ClientThread avem override la functia run in care trimitem un mesaj simplu si gestionam exceptiile
+* In GameClient se citeste de la tastatura si se tranmite serverului
+* In Main se initializeaza clientul
