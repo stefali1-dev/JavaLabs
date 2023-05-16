@@ -111,3 +111,9 @@
 * In ClientThread avem override la functia run in care trimitem un mesaj simplu si gestionam exceptiile
 * In GameClient se citeste de la tastatura si se tranmite serverului
 * In Main se initializeaza clientul
+
+### Lab 11 - compulsory:
+* Am construit clasele DemoApplication, Player, PlayerRepository si PlayerController
+* Clasa Player contine datele jucatorului(id, nume si scor) si este reprezenta si de un tabel in postgres denumit "players"
+* Clasa PlayerRepository reprezenta repository-ul destinat jucatorului, care ne ajuta sa gestionam datele din baza de date
+* in clasa PlayerController initializam prin @Autowired PlayerRepository-ul si avem o metoda de Get pentru a obtine toti jucatorii din tabelul "players"
