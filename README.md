@@ -118,3 +118,11 @@
 * Clasa PlayerRepository reprezenta repository-ul destinat jucatorului, care ne ajuta sa gestionam datele din baza de date
 * in clasa PlayerController initializam prin @Autowired PlayerRepository-ul si avem o metoda de Get pentru a obtine toti jucatorii din tabelul "players"
 * clasa DemoApplication initializam aplicatia
+
+### Lab 11 - homework:
+* clasa GameController contine endpoint-urile aplicatiei si metode precum getPlayers, addPlayer, updatePlayerName, deletePlayer, getGames
+* clasele Game si Player contin datele referitoare la un joc sau un jucator, si sunt reprezentate si de un tabel in baza de date
+* clasele GameRepository si PlayerRepository mostenesc clasa JpaRepository pentru a gestiona tabelele cu Games si Players
+* clasa DemoApplication este folosita pentru a initializa aplicatia
+* clasa RestClient serveste drept client care se foloseste si testeaza serviciile serverului, apeland toate endpoint-urile
+* clasa SwaggerConfig reprezinta un setup pentru swagger, ce ne permite sa generam o documentatie pentru api-ul nostru
