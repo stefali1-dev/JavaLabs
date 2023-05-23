@@ -126,3 +126,7 @@
 * clasa DemoApplication este folosita pentru a initializa aplicatia
 * clasa RestClient serveste drept client care se foloseste si testeaza serviciile serverului, apeland toate endpoint-urile
 * clasa SwaggerConfig reprezinta un setup pentru swagger, ce ne permite sa generam o documentatie pentru api-ul nostru
+
+### Lab 12 - compulsory:
+* clasa JavaClassAnalyzer e folosita pentru a afisa prototipele fisierelor .class si pentru a efectua testele specificate de adnotarea @Test
+* la inceput obtinem path-ul spre fisier, apoi extragem de acolo numele package-ului si clasei, extragem metodele si apoi metodele adnotate cu @Test
