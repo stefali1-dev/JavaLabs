@@ -130,3 +130,6 @@
 ### Lab 12 - compulsory:
 * clasa JavaClassAnalyzer e folosita pentru a afisa prototipele fisierelor .class si pentru a efectua testele specificate de adnotarea @Test
 * la inceput obtinem path-ul spre fisier, apoi extragem de acolo numele package-ului si clasei, extragem metodele si apoi metodele adnotate cu @Test
+
+### Lab 12 - homework:
+* Clasa JavaClassAnalyzer este o aplicație Java care permite analiza si testarea claselor Java. Ia ca intrare fie un fișier .class, un director care conține fișiere .class, fie un fișier .jar. Utilizează reflectarea pentru a încărca dinamic clasa sau clasele specificate în memorie și pentru a extrage informații despre acestea, cum ar fi metodele și pachetul lor. Aplicația identifică metode adnotate cu @Test și le invocă, rulând testele. Oferă statistici despre teste, inclusiv numărul total de teste, numărul de teste reușite și numărul de teste eșuate. De asemenea programul generează valori simulate pentru tipurile primitive și String atunci când este necesar pentru argumentele metodei de testare.
